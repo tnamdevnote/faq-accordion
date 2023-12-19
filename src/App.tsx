@@ -4,9 +4,10 @@ import "./App.css";
 
 function App() {
   return (
-    <main>
-      <h1>FAQ's</h1>
-    </main>
+    <>
+      <div className="h-[320px] w-full bg-no-repeat bg-cover bg-hero-pattern-mobile sm:bg-hero-pattern-desktop"></div>
+      <h1 className="text-red-400">FAQ's</h1>
+    </>
   );
 }
 
