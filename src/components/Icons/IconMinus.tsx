@@ -1,4 +1,4 @@
-function IconMinus() {
+function IconMinus({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ function IconMinus() {
       height="31"
       fill="none"
       viewBox="0 0 30 31"
+      className={className}
     >
       <path
         fill="#301534"

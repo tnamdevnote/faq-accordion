@@ -1,4 +1,4 @@
-function IconStar() {
+function IconStar({ className }: { className?: string }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ function IconStar() {
       height="41"
       fill="none"
       viewBox="0 0 40 41"
+      className={className}
     >
       <path
         fill="#AD28EB"
