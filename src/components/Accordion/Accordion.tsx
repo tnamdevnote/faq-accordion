@@ -44,7 +44,7 @@ function Accordion({
     <AccordionContext.Provider value={memoizedValue}>
       <div
         id="accordion"
-        className="my-4 w-full border-b-[1px] pb-8 last-of-type:border-b-0"
+        className="my-4 w-full border-b-[1px] pb-4 last-of-type:border-b-0"
       >
         {children}
       </div>
@@ -56,7 +56,7 @@ function Summary({ label }: { label: string }) {
   const { id, isOpen, toggle } = useAccordionContext();
 
   return (
-    <h3 className="transition-colors hover:text-purple-700  font-bold hover:cursor-pointer mb-4">
+    <h3 className="transition-colors text-purple-950 hover:text-purple-700  font-bold hover:cursor-pointer mb-4">
       <button
         id={id}
         className="flex justify-between items-center text-left w-full"

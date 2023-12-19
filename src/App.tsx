@@ -35,9 +35,11 @@ function App() {
     <>
       <div className="fixed top-0 h-[320px] w-full bg-no-repeat bg-cover bg-hero-pattern-mobile sm:bg-hero-pattern-desktop"></div>
       <section className="relative top-52 flex flex-col mx-8 sm:mx-auto p-10 min-w-0 bg-white drop-shadow-lg max-w-2xl rounded-xl">
-        <header className="w-full flex gap-4">
+        <header className="flex gap-4 mb-8">
           <IconStar className="w-8 h-18" />
-          <h1 className="text-4xl lg:text-5xl font-bold">FAQs</h1>
+          <h1 className="text-4xl lg:text-5xl font-bold text-purple-950">
+            FAQs
+          </h1>
         </header>
         {faqs.map((f) => (
           <Accordion key={f.id} id={`accordion-${f.id}`}>
