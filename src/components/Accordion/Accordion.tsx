@@ -58,7 +58,6 @@ function Summary({ label }: { label: string }) {
         id={id}
         className="flex justify-between items-center text-left w-full"
         aria-expanded={isOpen}
-        aria-controls="panel"
         onClick={toggle}
       >
         {label}
