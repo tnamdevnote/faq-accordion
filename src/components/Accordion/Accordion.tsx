@@ -72,6 +72,7 @@ function Details({ children }: { children: React.ReactNode }) {
   const { id, isOpen } = useAccordionContext();
   return (
     <div
+      id={id}
       aria-labelledby={id}
       role="region"
       className={`grid overflow-hidden transition-all ${
