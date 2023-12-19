@@ -42,7 +42,10 @@ function Accordion({
 
   return (
     <AccordionContext.Provider value={memoizedValue}>
-      <div id="accordion" className="my-4 w-full">
+      <div
+        id="accordion"
+        className="my-4 w-full border-b-[1px] pb-8 last-of-type:border-b-0"
+      >
         {children}
       </div>
     </AccordionContext.Provider>
