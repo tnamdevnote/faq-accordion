@@ -58,6 +58,7 @@ function Summary({ label }: { label: string }) {
         id={id}
         className="flex justify-between items-center text-left w-full"
         aria-expanded={isOpen}
+        aria-controls={id}
         onClick={toggle}
       >
         {label}
@@ -69,11 +70,17 @@ function Summary({ label }: { label: string }) {
 
 function Details({ children }: { children: React.ReactNode }) {
   const { id, isOpen } = useAccordionContext();
-  return isOpen ? (
-    <div aria-labelledby={id} role="region">
-      {children}
+  return (
+    <div
+      aria-labelledby={id}
+      role="region"
+      className={`grid overflow-hidden transition-all ${
+        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+      }`}
+    >
+      <p className="overflow-hidden">{children}</p>
     </div>
-  ) : null;
+  );
 }
 
 Accordion.Summary = Summary;

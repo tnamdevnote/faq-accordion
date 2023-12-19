@@ -36,7 +36,7 @@ function App() {
       <div className="fixed top-0 h-[320px] w-full bg-no-repeat bg-cover bg-hero-pattern-mobile sm:bg-hero-pattern-desktop"></div>
       <section
         aria-label="FAQs"
-        className="relative top-52 flex flex-col mx-8 sm:mx-auto px-10 min-w-0 bg-white drop-shadow-lg max-w-2xl rounded-xl"
+        className="relative top-52 flex flex-col mx-8 md:mx-auto px-10 min-w-0 bg-white drop-shadow-lg max-w-2xl rounded-xl"
       >
         <header aria-label="FAQ header" className="flex gap-4 my-10">
           <IconStar className="w-8 h-18" />
