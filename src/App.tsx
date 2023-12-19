@@ -32,7 +32,7 @@ const faqs = [
 
 function App() {
   return (
-    <>
+    <main>
       <div className="fixed top-0 h-[320px] w-full bg-no-repeat bg-cover bg-hero-pattern-mobile sm:bg-hero-pattern-desktop"></div>
       <section
         aria-label="FAQs"
@@ -51,7 +51,7 @@ function App() {
           </Accordion>
         ))}
       </section>
-    </>
+    </main>
   );
 }
 
