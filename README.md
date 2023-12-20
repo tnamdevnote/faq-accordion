@@ -87,7 +87,7 @@ Besides adding a keyboard support, another way to improve accessibility on Accor
   </button>
 </h2>
 ```
-![Screenshot 2023-12-20 at 1 00 38 AM](https://github.com/tnamdevnote/faq-accordion/assets/44216709/d48f18d3-354f-4c2b-99c7-fd3c428c9c8a)
+![Screenshot 2023-12-20 at 1 24 29 AM](https://github.com/tnamdevnote/faq-accordion/assets/44216709/cc746e49-26b1-44d5-b654-c965a0ade714)
 
 When we take a look at the accessibility tree in the above image, we can see that `expanded` property is set to true as the second accordion comes into focus with tab key. This allows screen readers to detect the current state of the component, allowing visually impaired people to navigate through the content much easier.<br>
 
