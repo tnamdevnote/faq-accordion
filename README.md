@@ -79,7 +79,7 @@ Besides adding a keyboard support, another way to improve accessibility on Accor
 ```jsx
 <h2>
   <button
-    aria-label={isExpanded} // isExpanded resolves to boolean values.
+    aria-expanded={isExpanded} // isExpanded resolves to boolean values.
     onClick={handleClick}
   >
     Accordion Header with Accessibility Feature
@@ -92,9 +92,48 @@ Besides adding a keyboard support, another way to improve accessibility on Accor
 When we take a look at the accessibility tree in the above image, we can see that `expanded` property is set to true as the second accordion comes into focus with tab key. This allows screen readers to detect the current state of the component, allowing visually impaired people to navigate through the content much easier.<br>
 
 #### Accessibility Rule #3: Linking the panel with the header: `aria-labelledby` and `role`<br>
+Another way to improve accessibility of a accordion is to link the contents inside the panel to the header button. In this way, a narrator or other assissitive technology will know where to find the associated content for that accordion. 
+We can first link the panel to the header by using `aria-labelledby` attribute in the content element. And thi needs to point to the id attribute of the heading.
+Then, we should also add `role` attribute next to `aria-labelledby`. This will tell the browser that the content is associated with whatever the `aria-labelledby` is pointing to. Do note that this feature won't work without either of `role` or `aria-labelledby`. So be sure to use them together.
+
+```jsx
+
+<h2 id="panel-heading">
+  <button>
+  ...
+  </button
+<h2>
+<div
+  aria-labelledby="panel-heading"
+  role="region"
+>
+  <p className="overflow-hidden">{children}</p>
+</div>
+```
+![image](https://github.com/tnamdevnote/faq-accordion/assets/44216709/064bbc74-d2c4-4627-a9cd-619e04854f57)
+
 
 #### Accessibility Rule #4: Naming the control: `aria-controls` <br>
 
+A final tip for creating accessible accordion is to use `aria-controls` in the `<button>` element. This not only applies to Accordion but also in other situation where you are using `<button>` in other situation to control other elements. The reason for adding `aria-controls` attribute is to let the assissitive tools know which part of the UI or content is affected by the button, and in our case, the `<button>` is controlling the behavior of the panel. Therefore, we want to assign same attribute value as with the `id` in the panel.
 
+```jsx
+<h2 id="panel-heading">
+  <button
+    aria-expanded="true"
+    aria-controls="panel-content" // points to id in the <div> tag.
+  >
+  ...
+  </button
+<h2>
+<div
+  id="panel-content"
+  aria-labelledby="panel-heading"
+  role="region"
+>
+  <p className="overflow-hidden">{children}</p>
+</div>
+
+```
 
 
